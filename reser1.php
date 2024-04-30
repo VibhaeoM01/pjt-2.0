@@ -102,7 +102,7 @@ if (!$anyRowFilled) {
 	color:rgb(22, 85, 243);
 	;"><div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo1.png"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 			<div>
 			<div style="float:right; font-size:20px;margin-top:20px;">
@@ -116,7 +116,7 @@ if (!$anyRowFilled) {
 			
 			</div>
 			<div id="heading">
-				<a href="index.php" style="color:orangered">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>

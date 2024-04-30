@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show All Tickets</title>
-    <link rel="stylesheet" href="ticket_list.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="Default.css"> 
     <style>
         table {
             border-collapse: collapse;
@@ -15,9 +15,11 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Show All Tickets</h1>
+
+<body style="background-image: url(images/download.jpeg);">
+
+    <div class="container" style="font-size:24px">
+        <h1>All Tickets</h1>
         <div class="ticket-table">
             <table>
                 <tr>

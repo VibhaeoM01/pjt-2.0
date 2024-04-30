@@ -35,7 +35,7 @@ session_start();
 		<!-- Header -->
 		<div class="header">
 		<div style="float:left;width:150px;">
-		<img src="images/logo1.png" style="height: 94px;"/>
+		<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 
 			<div>
@@ -55,7 +55,7 @@ session_start();
 			</div>
 			<div id="heading">
 				
-				<a href="index.php" style="color:orangered;">Indian Railways</a>
+				<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>
@@ -71,8 +71,8 @@ session_start();
 				<a class="brand" href="profile.php">PROFILE</a>
 				<a class="brand" href="display.php">BOOKING HISTORY</a>
 				<a class="brand" href="admin_login.php">Admin</a>
-				<a href="login1.php" class="btn btn-info" style="    margin-left: 235px;">Login</a>";
-				<a href="register.php" class="btn btn-info" >Register</a>";
+				<a href="login1.php" class="btn btn-info" style="    margin-left: 235px;">Login</a>
+				<a href="register.php" class="btn btn-info" >Register</a>
 				</div>
 			</div>
 		</div>

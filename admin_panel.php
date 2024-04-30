@@ -62,7 +62,7 @@ session_start();
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color:orange;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -70,7 +70,7 @@ session_start();
         }
         
         .button:hover {
-            background-color: #0056b3;
+            background-color: red;
         }
     </style>
 
@@ -101,7 +101,7 @@ session_start();
 			</div>
 			<div id="heading">
 				
-				<a href="index.php" style="color:orangered;">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>

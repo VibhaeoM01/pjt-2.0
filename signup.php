@@ -44,10 +44,10 @@
 		<!-- Header -->
 		<div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo.png"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>
 			<div id="heading">
-				<a href="index.php" style="color:orangered">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 		</div>
 		<!-- Navigation bar -->

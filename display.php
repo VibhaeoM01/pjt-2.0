@@ -71,11 +71,11 @@ $result=mysqli_query($conn,$sql);
 	<script type="text/javascript" src="js/man.js"></script>
 	
 </head>
-<body style="background-image: url(images/bg.jpg);">
+<body style="background-image: url(images/bg1.jpg);">
 	<div class="wrap">
 		<div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo.png"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 			<div>
 			<div style="float:right; font-size:20px;margin-top:20px;">
@@ -88,7 +88,7 @@ $result=mysqli_query($conn,$sql);
 			
 			</div>
 			<div id="heading">
-				<a href="index.php" style="color:orangered">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>
@@ -97,7 +97,6 @@ $result=mysqli_query($conn,$sql);
 			<div class="navbar-inner">
 				<div class="container" >
 				<a class="brand" href="index.php" >HOME</a>
-				<a class="brand" href="train.php" >FIND TRAIN</a>
 				<a class="brand" href="reservation.php">RESERVATION</a>
 				<a class="brand" href="profile.php">PROFILE</a>
 				<a class="brand" href="display.php">BOOKING HISTORY</a>
@@ -111,7 +110,7 @@ $result=mysqli_query($conn,$sql);
 			
 			</div>
 			<br>
-			<!--
+			
 			<div >
 				<table class="table">
 				
@@ -126,12 +125,12 @@ $result=mysqli_query($conn,$sql);
 				</tr>
 				</table>
 			</div>
-			-->
+			
 			<div>
 			
 			</div>
 			<div >
-				<table  class="table">
+				<table  class="table"style="border: 1px solid black; color: white;" >
 				<col width="90">
 					<col width="90">
 				<col width="90">
@@ -154,24 +153,24 @@ $result=mysqli_query($conn,$sql);
 				$n=1;
 				while($row=mysqli_fetch_array($result)){
 					if($n%2!=0)
-					{
+					{// style=border: 1px solid black; color: white;
 				?>
 				<tr class="text-error">
-					<th style="width:10px;"> <?php echo $n; ?> </th>
-					<th style="width:100px;"> <?php echo $row['Tnumber']; ?> </th>
-					<th style="width:100px;"> <?php echo $row['doj']; ?> </th>
-					<th style="width:100px;"> <?php echo $row['fromstn']; ?> </th>
-					<th style="width:100px;"> <?php echo $row['tostn']; ?> </th>
-					<th style="width:100px;"> <?php echo $row['DOB']; ?> </th>
-					<th style="width:100px;"> <?php echo $row['Status']; ?> </th>
-					<th style="width:100px;"><a href="ViewFullStatus.php?Tnumber=<?php echo $row['Tnumber'];?>&doj=<?php echo $row['doj'];?>&fromstn=<?php echo $row['fromstn']; ?>&tostn=<?php echo $row['tostn']; ?>&DOB=<?php echo $row['DOB'];?>">View Full Status </a> </th>
+					<th style="width:10px; style=border: 1px solid black; color: white;"> <?php echo $n; ?> </th>
+					<th style="width:100px; style=border: 1px solid black; color: white;"> <?php echo $row['Tnumber']; ?> </th>
+					<th style="width:100px; style=border: 1px solid black; color: white;"> <?php echo $row['doj']; ?> </th>
+					<th style="width:100px;style=border: 1px solid black; color: white;"> <?php echo $row['fromstn']; ?> </th>
+					<th style="width:100px;style=border: 1px solid black; color: white;"> <?php echo $row['tostn']; ?> </th>
+					<th style="width:100px;style=border: 1px solid black; color: white;"> <?php echo $row['DOB']; ?> </th>
+					<th style="width:100px;style=border: 1px solid black; color: white;"> <?php echo $row['Status']; ?> </th>
+					<th style="width:100px;style=border: 1px solid black; color: white;"><a href="ViewFullStatus.php?Tnumber=<?php echo $row['Tnumber'];?>&doj=<?php echo $row['doj'];?>&fromstn=<?php echo $row['fromstn']; ?>&tostn=<?php echo $row['tostn']; ?>&DOB=<?php echo $row['DOB'];?>">View Full Status </a> </th>
 				</tr>
 				<?php 
 					}
 					else
 					{
 				?>
-				<tr class="text-info">
+				<tr class="text-info" style="style=border: 1px solid black; color: white;">
 					<td style="width:10px;"> <?php echo $n; ?> </td>
 					<th style="width:100px;"> <?php echo $row['Tnumber']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['doj']; ?> </th>
@@ -194,17 +193,7 @@ $result=mysqli_query($conn,$sql);
 			</div>
 		</div>
 			
-		<!-- Copyright -->
-		<footer >
-		<div style="width:100%;">
-			<div style="float:left;">
-			<p class="text-right text-info">  &copy; all copyright reserved</p>	
-			</div>
-			<div style="float:right;">
-			<p class="text-right text-info">	Desinged By :supriya revanwar</p>
-			</div>
-		</div>
-		</footer>
+		
 	</div>
 </body>
 </html>	

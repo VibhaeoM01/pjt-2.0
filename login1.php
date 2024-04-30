@@ -40,11 +40,11 @@ session_start();
 		<!-- Header -->
 		<div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo1.png"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 			<div>
 			<div id="heading">
-				<a href="index.html" style="color:orangered">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>

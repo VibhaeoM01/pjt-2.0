@@ -47,11 +47,11 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 	<script type="text/javascript" src="js/man.js"></script>
 	
 </head>
-<body style="background-image: url(images/bg.jpg);">
+<body style="background-image: url(images/2.jpg);">
 	<div class="wrap">
 		<div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo.png"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 			<div>
 			<div style="float:right; font-size:20px;margin-top:20px;">
@@ -64,7 +64,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 			
 			</div>
 			<div id="heading">
-				<a href="index.php" style="color:orangered">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>
@@ -83,13 +83,13 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 		
 		<div class="span12 well">
 			<div align="center" style="border-bottom: 3px solid #ddd;">
-				<h2>Booked Ticket History </h2>
+				<h2 style="color:white;">Booked Ticket History </h2>
 			
 			</div>
 			<br>
 		
 	<div >
-				<table  class="table">
+				<table  class="table" style="color:white;">
 				<col width="90">
 					<col width="90">
 				<col width="90">
@@ -118,7 +118,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 						$GLOBALS['class']=$row['class'];
 						
 				?>
-				<tr class="text-error">
+				<tr class="text-error"style="color:white;" >
 					<th style="width:10px;"> <?php echo $n; ?> </th>
 					<th style="width:100px;"> <?php echo $row['Tnumber']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['doj']; ?> </th>
@@ -134,7 +134,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 					else
 					{
 				?>
-				<tr class="text-info">
+				<tr class="text-info" style="color:white;">
 					<th style="width:10px;"> <?php echo $n; ?> </th>
 					<th style="width:100px;"> <?php echo $row['Tnumber']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['doj']; ?> </th>
@@ -153,15 +153,15 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 				<?php 
 				$sql2="Select ".$class." from train_list WHERE Number=$tno";
 				//echo $sql2;
-				$result2=mysqli_query($conn,$sql2);
-				while($row=mysqli_fetch_array($result2)){
-					$GLOBALS['amt']=$row[$class];
-				}
+				// $result2=mysqli_query($conn,$sql2);
+				// while($row=mysqli_fetch_array($result2)){
+				// 	$GLOBALS['amt']=$row[$class];
+				// }
 				?>
 				</table>
 				<table class="table">
 				<tr class="text-info">
-					<td>Amount Paid :<?php $tot=($n-1)*$amt;echo $tot;?></td>
+					<!-- <td>Amount Paid :<?php $tot=($n-1)*$amt;echo $tot;?></td> -->
 				</tr>
 				</table>
 				

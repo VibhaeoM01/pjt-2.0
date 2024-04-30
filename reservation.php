@@ -68,7 +68,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 		<!-- Header -->
 		<div class="header">
 			<div style="float:left;width:150px;">
-				<img src="images/logo1.png" style="height: 94px;"/>
+			<img src="images/logo1.jpg" style="height: 100px;"/>
 			</div>		
 			<div>
 			<div style="float:right; font-size:20px;margin-top:20px;">
@@ -89,7 +89,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 			
 			</div>
 			<div id="heading">
-				<a href="index.php" style="color:orangered" >Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>
@@ -159,7 +159,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				</tr>
 				</table>
 				</div>
-				<div class="display" style="margin-top:0px;overflow:auto;">
+				<div class="display" style="margin-top:0px;overflow:auto;color: white;">
 				<table class="table">
 				
 				<?php  
@@ -202,7 +202,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 					{
 				
 				?>
-				<tr class="text-error">
+				<tr class="text-error" style="color: white;">
 					<td style="width:70px;"> <?php   echo $row['Number']; ?> </td>
 					<td style="width:250px;"> <?php echo $row['Name']; ?> </a></td>
 					<td style="width:65px;"> <?php echo $row['Ori']; ?> </td>
@@ -222,7 +222,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 					else
 					{
 				?>
-				<tr class="text-info">
+				<tr class="text-info" style="color: white;">
 					<td style="width:70px;"> <?php  echo $row['Number']; ?> </td>
 					<td style="width:210px;"><?php  echo $row['Name']; ?> </a> </td>
 					<td style="width:65px;"> <?php  echo $row['Ori']; ?> </td>

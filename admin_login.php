@@ -53,7 +53,7 @@ session_start();
 			</div>
 			<div id="heading">
 				
-				<a href="index.php" style="color:orangered;">Indian Railways</a>
+			<a href="index.php">Railway Connect</a>
 			</div>
 			</div>
 		</div>
