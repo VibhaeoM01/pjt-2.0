@@ -111,7 +111,7 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 		
 		
 			<!-- find train with qouta-->
-			<div class="span4 well">
+			<!-- <div class="span4 well">
 			<form method="post" action="reservation.php">
 			<table class="table">
 				<tr>
@@ -142,10 +142,54 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				</tr>
 			</table>
 			</form>
-			</div>
-	 	
-		 <!-- display train -->
-			<div class="span8 well">
+
+			
+			</div> -->
+			
+    
+ 
+</div>
+<div class="final well">
+				<table>
+					<tr>
+						<td>
+						<div class="span4 ">
+    <form method="post" action="reservation.php">
+        <table class="table">
+            <tr>
+                <th style="border-top:0px;"><label>From</label></th>
+                <td style="border-top:0px;"><input type="text" class="input-block-level" name="from" id="fr"></td>
+                <th style="border-top:0px;"><label>To</label></th>
+                <td style="border-top:0px;"><input type="text" class="input-block-level" name="to" id="to1"></td>
+            </tr>
+            <tr>
+                <th style="border-top:0px;"><label>Quota</label></th>
+                <td style="border-top:0px;" colspan="3">
+                    <input list="q1" class="input-block-level" name="quota" id="q12" value="<?php if(isset($_POST['quota']))echo $_POST['quota'];?>">
+                    <datalist id="q1">
+                        <option value="General">General</option>
+                        <option value="Tatkal">Tatkal</option>
+                        <option value="Ladies">Ladies</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th style="border-top:0px;"><label>Date</label></th>
+                <td style="border-top:0px;" colspan="3">
+                    <input type="date" class="input-block-level input-medium" name="date" max="<?php echo date('Y-m-d',time()+60*60*24*90);?>" min="<?php echo date('Y-m-d')?>" value="<?php if(isset($_POST['date'])){echo $_POST['date'];}else {echo date('Y-m-d');}?>">
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:0px;"><input class="btn btn-info" type="submit" value="OK"></td>
+                <td style="border-top:0px;" colspan="3"><a href="reservation.php" class="btn btn-info" type="reset" value="Reset">Reset</a></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+						</td> 
+						<td style="margin-left:10px;">
+						<div class="span8 ">
 				<div class="display" style="height:30px;     color: white;">
 				<table class="table">
 				<tr>
@@ -209,13 +253,16 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 					<td style="width:55px;"> <?php echo $row['Dest']; ?> </td>
 					<td style="width:60px;"> <?php   echo $q; ?> </td>
 					<td style="width:65px;"> <?php   echo $d; ?> </td>
+					
 					<td style="width:200px;">  
-						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>"><b>1A</b></a> 
-						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>"><b>2A</b></a>
-						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>"><b>3A</b></a> 
-						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>"><b>SL</b></a> 
-						
-					</td>
+    <select class="text-error" onchange="window.location.href=this.value;">
+        <option value="">Select Class</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>">1A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>">2A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>">3A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>">SL</option>
+    </select>
+</td>
 					</tr>
 				<?php  
 					}
@@ -229,12 +276,15 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 					<td style="width:55px;"> <?php  echo $row['Dest']; ?> </td>
 					<td style="width:60px;"> <?php  echo $q; ?> </td>
 					<td style="width:65px;"> <?php  echo $d; ?> </td>
-					<td style="width:200px;">
-						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>"><b>1A</b> </a> 
-						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>"><b>2A</b></a>
-						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>"><b>3A</b></a>
-						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>"><b>SL</b></a>
-					</td>
+					<td style="width:200px;">  
+    <select class="text-error" onchange="window.location.href=this.value;">
+        <option value="">Select Class</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>">1A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>">2A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>">3A</option>
+        <option value="reser.php?tno=<?php echo $row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>">SL</option>
+    </select>
+</td>	
 				</tr>
 				<?php  
 					}
@@ -251,7 +301,16 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				</table>
 				</div>
 			</div>
-		
+						</td>
+					</tr>
+				</table>
+
+
+			
+	 	
+		 <!-- display train -->
+			
+		 </div>
 	</div>
 </body>
 </html>

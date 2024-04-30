@@ -31,8 +31,7 @@
                     <th>Number of Passengers</th>
                     <th>Name</th>
                     <th>Age</th>
-                    <th>Aadhar Number</th>
-                    <th>Action</th>
+                    <th>Status</th>
                 </tr>
                 <?php
                 // Connect to your database
@@ -59,7 +58,7 @@
                 if ($result && $result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td>" . $row["uname"] . "</td>";
+                        echo "<td>" . $row["ID"] . "</td>";
                         echo "<td>" . $row["Tnumber"] . "</td>";
                         echo "<td>" . $row["class"] . "</td>";
                         echo "<td>" . $row["fromstn"] . "</td>";
