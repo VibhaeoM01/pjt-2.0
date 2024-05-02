@@ -32,7 +32,7 @@ session_start();
 
 
 	<div class="wrap">
-		<!-- Header -->
+	
 		<div class="header">
 		<div style="float:left;width:150px;">
 		<img src="images/logo1.jpg" style="height: 100px;"/>
@@ -43,7 +43,7 @@ session_start();
 			<?php
 			 if(isset($_SESSION['name']))	
 			 {
-			 echo "Welcome,".$_SESSION['name']."&nbsp;&nbsp;&nbsp;<a href=\"logout.php\" class=\"btn btn-info\">Logout</a>";
+			 echo "Welcome"."&nbsp;&nbsp;&nbsp;<a href=\"logout.php\" class=\"btn btn-info\">Logout</a>";
 			 }
 			 else
 			 {
@@ -88,8 +88,8 @@ session_start();
 <A HREF="index.php">
 
 </A></div>
-<h1 align="center">Welcome to Indian Railways!</h1><br/><br/><br/>
-<h2 align="center">Have a safe journey with us</h2>
+<h1 align="center" style="color:white;">Welcome to Railway Connect</h1><br/><br/><br/>
+<h2 align="center" style="color:white;">SAFETY|SECURITY|PUNCTUALITY</h2>
 <br/><br/><br/>
 <?php
 if(isset($_SESSION['user_info']))

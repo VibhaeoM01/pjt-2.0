@@ -35,7 +35,7 @@ session_start();
 		<!-- Header -->
 		<div class="header">
 		<div style="float:left;width:150px;">
-		<img src="images/logo1.png" style="height: 94px;"/>
+		<img src="images/logo1.jpg" style="height: 94px;"/>
 			</div>		
 
 			<div>
@@ -76,8 +76,12 @@ session_start();
 		</div>
 		<body style="background-image: url('images/bg11.jpg'); background-size: cover;">	
 		
-    <div class="container">
-        <h2>Admin Login</h2>
+    <div class="container" style="
+       width: 272px;
+    border-radius: 5px;
+    background: #00000054;
+">
+        <h2 style="color:white;">Admin Login</h2>
         <form action="admin_authenticate.php" method="post">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" required><br>

@@ -58,7 +58,7 @@ session_start();
 				<a class="brand" href="reservation.php">RESERVATION</a>
 				<a class="brand" href="profile.php">PROFILE</a>
 				<a class="brand" href="display.php">BOOKING HISTORY</a>
-				<a class="brand" href="admin_login.html">Admin</a>
+				<a class="brand" href="admin_login.php">Admin</a>
 				</div>
 			</div>
 		</div>
