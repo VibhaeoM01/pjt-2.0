@@ -19,7 +19,7 @@ $tbl_name="booking";
 
 mysqli_select_db($conn,"$db_name") or die("cannot select db");
 	$name1=$_SESSION['name'];
-	$sql="SELECT DISTINCT Tnumber,class,doj,DOB,fromstn,tostn,Status FROM $tbl_name WHERE uname='$name1' ORDER BY doj ASC";
+	$sql="SELECT DISTINCT Tnumber,class,doj,DOB,fromstn,tostn,Status FROM $tbl_name WHERE Name='$name1' ORDER BY doj ASC";
 	$result=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($result);
 

@@ -16,7 +16,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 	$fromstn=$_GET['fromstn'];
 	$tostn=$_GET['tostn'];
 	$DOB=$_GET['DOB'];
-	$sql="SELECT Tnumber,doj,Name,Age,Sex,Status,DOB,class FROM $tbl_name WHERE (uname='$name1' and Tnumber='$tno' and doj='$doj' and DOB='$DOB' and fromstn='$fromstn' and tostn='$tostn')";
+	$sql="SELECT Tnumber,doj,Name,Age,Sex,Status,DOB,class FROM $tbl_name WHERE (Name='$name1' and Tnumber='$tno' and doj='$doj' and DOB='$DOB' and fromstn='$fromstn' and tostn='$tostn')";
 	$result=mysqli_query($conn,$sql);
 ?>
 	<!DOCTYPE html>

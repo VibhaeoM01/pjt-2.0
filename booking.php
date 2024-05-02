@@ -15,12 +15,13 @@ $tbl_name="booking";
 mysqli_select_db($conn,"$db_name") or die("cannot select db");
 
 
-$uname=$_SESSION['name'];
-$num=$_GET['tno'];
+$ID=$_SESSION['ID'];
+$num=$_GET['Tnumber'];
+$class=$_GET['class'];
 // $seat= $_GET['seat'];
-$name=$_GET['name1'];
-$age=$_GET['age1'];
-$sex=$_GET['sex1'];
+$name=$_GET['Name'];
+$age=$_GET['Age'];
+// $sex=$_GET['sex'];
 $fromstn=$_GET[	'fromstn'];
 $tostn=$_GET['tostn'];
 $doj=$_GET['doj'];
@@ -44,7 +45,17 @@ $value;
 // 	{
 // 	$sql="INSERT INTO $tbl_name(uname,Tnumber,class,doj,DOB,fromstn,tostn,Name,Age,sex,Status)
 // 	VALUES ('$uname','$num','$seat','$doj','$dob','$fromstn','$tostn','$name','$age','$sex','$status')";
-// 	$result=$conn->query($sql);
+// 	$$sql1="SELECT ".$seat." from seats_availability where Train_No='".$num."' and doj='".$doj."'";
+// $result1=$conn->query($sql1);
+
+// if (!$result1) {
+//     die('Invalid query: ' . mysqli_error($conn));
+// }
+
+// $value;
+// while($row1=mysqli_fetch_array($result1)){
+//     $value=$row1["".$seat];
+// }$conn->query($sql);
 // 	echo "$sql</br>";
 // 	if(!$result) die ($conn->error);
 // 	$value-=1;
@@ -58,8 +69,8 @@ $value;
 	$status="Waiting";
 	if(!empty($name) || !empty($age) )
 	{
-	$sql="INSERT INTO $tbl_name(uname,Tnumber,class,doj,DOB,fromstn,tostn,Name,Age,sex,Status)
-	VALUES ('$uname','$num','$seat','$doj','$dob','$fromstn','$tostn','$name','$age','$sex','$status')";
+	$sql="INSERT INTO $tbl_name(ID,Tnumber,class,doj,DOB,fromstn,tostn,Name,Age,sex,Status)
+	VALUES ('$ID','$num','$class','$doj','$dob','$fromstn','$tostn','$name','$age','$sex','$status')";
 	$result=$conn->query($sql);
 	echo "$sql</br>";
 	if(!$result) die ($conn->error);
