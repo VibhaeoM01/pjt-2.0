@@ -27,7 +27,7 @@
                     <th>Train Number</th>
                     <th>Destination</th>
                     <th>Source</th>
-                    <th>Date</th>
+                    <th>Name</th>
                     <th>Number of Passengers</th>
                     <th>Name</th>
                     <th>Age</th>
@@ -60,7 +60,7 @@
                         echo "<tr>";
                         echo "<td>" . $row["ID"] . "</td>";
                         echo "<td>" . $row["Tnumber"] . "</td>";
-                        echo "<td>" . $row["class"] . "</td>";
+                        // echo "<td>" . $row["class"] . "</td>";
                         echo "<td>" . $row["fromstn"] . "</td>";
                         echo "<td>" . $row["tostn"] . "</td>";
                         echo "<td>" . $row["Name"] . "</td>";
